@@ -1,0 +1,570 @@
+8          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+9          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+
+   flag_RSTO  flag_RSTOS0  flag_RSTR   flag_S0   flag_S1   flag_S2   flag_S3  \
+0   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+1   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+2   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+3   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+4   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+5   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+6   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+7   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+8   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+9   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+1  0.825150 -0.046432
+2 -1.211901 -0.046432
+3  0.825150 -0.046432
+4  0.825150 -0.046432
+5 -1.211901 -0.046432
+6 -1.211901 -0.046432
+7 -1.211901 -0.046432
+8 -1.211901 -0.046432
+9 -1.211901 -0.046432
+Label for the first sequnce: 1
+--- Starting Episode 1 ---
+WARNING:tensorflow:From E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+Step: 1000, Current Epsilon: 0.0100
+Step: 2000, Current Epsilon: 0.0100
+Step: 3000, Current Epsilon: 0.0100
+Step: 4000, Current Epsilon: 0.0100
+Traceback (most recent call last):
+  File "E:\Vscode projects\MINI Project\IDS\train.py", line 36, in <module>
+    replay(batch_size)
+  File "E:\Vscode projects\MINI Project\IDS\agent.py", line 81, in replay
+    main_network.fit(states, current_q_values, batch_size=batch_size, epochs=1, verbose=0)
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\engine\training.py", line 1745, in fit  
+    data_handler = data_adapter.get_data_handler(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\engine\data_adapter.py", line 1688, in get_data_handler
+    return DataHandler(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\engine\data_adapter.py", line 1292, in __init__
+    self._adapter = adapter_cls(
+                    ^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\engine\data_adapter.py", line 355, in __init__
+    dataset = self.slice_inputs(indices_dataset, inputs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\engine\data_adapter.py", line 396, in slice_inputs
+    dataset = dataset.map(grab_batch, num_parallel_calls=tf.data.AUTOTUNE)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 2280, in map
+    return map_op._map_v2(
+           ^^^^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\tensorflow\python\data\ops\map_op.py", line 40, in _map_v2
+    return _ParallelMapDataset(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\tensorflow\python\data\ops\map_op.py", line 163, in __init__
+    variant_tensor = gen_dataset_ops.parallel_map_dataset_v2(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\tensorflow\python\ops\gen_dataset_ops.py", line 5797, in parallel_map_dataset_v2
+    _result = pywrap_tfe.TFE_Py_FastPathExecute(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+(venv) PS E:\Vscode projects\MINI Project\IDS> git add .
+warning: in the working copy of 'KDDTrain+.txt', LF will be replaced by CRLF the next time Git touches it
+(venv) PS E:\Vscode projects\MINI Project\IDS> git commit -m "training not completed"
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Checking connectivity: 18621, done.
+warning: There are too many unreachable loose objects; run 'git prune' to remove them.
+[main bdb737e] training not completed
+ 9 files changed, 126257 insertions(+), 29 deletions(-)
+ create mode 100644 KDDTrain+.txt
+ delete mode 100644 Networks.py
+PS E:\Vscode projects\MINI Project\IDS> & "e:\Vscode projects\MINI Project\IDS\venv\Scripts\Activate.ps1"
+(venv) PS E:\Vscode projects\MINI Project\IDS> python train.py 
+2026-04-06 15:58:47.252904: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING:tensorflow:From E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-06 15:59:12.223185: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+   duration  src_bytes  dst_bytes      land  wrong_fragment    urgent  \
+0 -0.110249  -0.007679  -0.004919 -0.014089       -0.089486 -0.007736   
+1 -0.110249  -0.007737  -0.004919 -0.014089       -0.089486 -0.007736   
+2 -0.110249  -0.007762  -0.004919 -0.014089       -0.089486 -0.007736   
+3 -0.110249  -0.007723  -0.002891 -0.014089       -0.089486 -0.007736   
+4 -0.110249  -0.007728  -0.004814 -0.014089       -0.089486 -0.007736   
+5 -0.110249  -0.007762  -0.004919 -0.014089       -0.089486 -0.007736   
+6 -0.110249  -0.007762  -0.004919 -0.014089       -0.089486 -0.007736   
+7 -0.110249  -0.007762  -0.004919 -0.014089       -0.089486 -0.007736
+8 -0.110249  -0.007762  -0.004919 -0.014089       -0.089486 -0.007736
+9 -0.110249  -0.007762  -0.004919 -0.014089       -0.089486 -0.007736
+
+        hot  num_failed_logins  logged_in  num_compromised  root_shell  \
+0 -0.095076          -0.027023  -0.809262        -0.011664   -0.036652
+1 -0.095076          -0.027023  -0.809262        -0.011664   -0.036652
+2 -0.095076          -0.027023  -0.809262        -0.011664   -0.036652
+3 -0.095076          -0.027023   1.235694        -0.011664   -0.036652
+4 -0.095076          -0.027023   1.235694        -0.011664   -0.036652
+5 -0.095076          -0.027023  -0.809262        -0.011664   -0.036652
+6 -0.095076          -0.027023  -0.809262        -0.011664   -0.036652
+7 -0.095076          -0.027023  -0.809262        -0.011664   -0.036652
+8 -0.095076          -0.027023  -0.809262        -0.011664   -0.036652
+9 -0.095076          -0.027023  -0.809262        -0.011664   -0.036652
+
+   su_attempted  num_root  num_file_creations  num_shells  num_access_files  \
+0     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+1     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+2     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+3     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+4     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+5     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+6     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+7     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+8     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+9     -0.024437 -0.012385            -0.02618    -0.01861         -0.041221
+
+   num_outbound_cmds  is_host_login  is_guest_login     count  srv_count  \
+0                0.0      -0.002817       -0.097531 -0.717045  -0.354343
+1                0.0      -0.002817       -0.097531 -0.620982  -0.368110
+2                0.0      -0.002817       -0.097531  0.339648  -0.299273
+3                0.0      -0.002817       -0.097531 -0.690846  -0.313041
+4                0.0      -0.002817       -0.097531 -0.472521   0.058678
+5                0.0      -0.002817       -0.097531  0.322182  -0.120298
+6                0.0      -0.002817       -0.097531  0.715167  -0.257971
+7                0.0      -0.002817       -0.097531  0.287250  -0.161600
+8                0.0      -0.002817       -0.097531  1.623399  -0.065228
+9                0.0      -0.002817       -0.097531  0.426978  -0.271739
+
+   serror_rate  srv_serror_rate  rerror_rate  srv_rerror_rate  same_srv_rate  \
+0    -0.637209        -0.631929    -0.374362        -0.374432       0.771283
+1    -0.637209        -0.631929    -0.374362        -0.374432      -1.321428
+2     1.602664         1.605104    -0.374362        -0.374432      -1.389669
+3    -0.189235        -0.184522    -0.374362        -0.374432       0.771283
+4    -0.637209        -0.631929    -0.374362        -0.374432       0.771283
+5    -0.637209        -0.631929     2.746403         2.715365      -1.139453
+6     1.602664         1.605104    -0.374362        -0.374432      -1.389669
+7     1.602664         1.605104    -0.374362        -0.374432      -1.184947
+8     1.602664         1.605104    -0.374362        -0.374432      -1.298681
+9     1.602664         1.605104    -0.374362        -0.374432      -1.366922
+
+   diff_srv_rate  srv_diff_host_rate  dst_host_count  dst_host_srv_count  \
+0      -0.349683           -0.374560       -0.324063           -0.818890
+1       0.482201           -0.374560        0.734343           -1.035688
+2       0.038529           -0.374560        0.734343           -0.809857
+3      -0.349683           -0.374560       -1.533670            1.258754
+4      -0.349683           -0.028179        0.734343            1.258754
+5      -0.016930           -0.374560        0.734343           -0.873089
+6      -0.016930           -0.374560        0.734343           -0.963422
+7      -0.016930           -0.374560        0.734343           -0.909222
+8      -0.072389           -0.374560        0.734343           -0.836956
+9      -0.016930           -0.374560        0.734343           -0.927289
+
+   dst_host_same_srv_rate  dst_host_diff_srv_rate  \
+0               -0.782367               -0.280282
+1               -1.161030                2.736852
+2               -0.938287               -0.174417
+3                1.066401               -0.439078
+4                1.066401               -0.439078
+5               -1.005110               -0.068553
+6               -1.071933               -0.174417
+7               -1.027384               -0.068553
+8               -0.960561               -0.174417
+9               -1.049659               -0.121485
+
+   dst_host_same_src_port_rate  dst_host_srv_diff_host_rate  \
+0                     0.069972                    -0.289103
+1                     2.367737                    -0.289103
+2                    -0.480197                    -0.289103
+3                    -0.383108                     0.066252
+4                    -0.480197                    -0.289103
+5                    -0.480197                    -0.289103
+6                    -0.480197                    -0.289103
+7                    -0.480197                    -0.289103
+8                    -0.480197                    -0.289103
+9                    -0.480197                    -0.289103
+
+   dst_host_serror_rate  dst_host_srv_serror_rate  dst_host_rerror_rate  \
+0             -0.639532                 -0.624871             -0.224532
+1             -0.639532                 -0.624871             -0.387635
+2              1.608759                  1.618955             -0.387635
+3             -0.572083                 -0.602433             -0.387635
+4             -0.639532                 -0.624871             -0.387635
+5             -0.639532                 -0.624871              2.874410
+6              1.608759                  1.618955             -0.387635
+7              1.608759                  1.618955             -0.387635
+8              1.608759                  1.618955             -0.387635
+9              1.608759                  1.618955             -0.387635
+
+   dst_host_srv_rerror_rate  protocol_type_icmp  protocol_type_tcp  \
+0                 -0.376387           -0.265429           0.476175
+1                 -0.376387           -0.265429          -2.100067
+2                 -0.376387           -0.265429           0.476175
+3                 -0.345084           -0.265429           0.476175
+4                 -0.376387           -0.265429           0.476175
+5                  2.753914           -0.265429           0.476175
+6                 -0.376387           -0.265429           0.476175
+7                 -0.376387           -0.265429           0.476175
+8                 -0.376387           -0.265429           0.476175
+9                 -0.376387           -0.265429           0.476175
+
+   protocol_type_udp  service_IRC  service_X11  service_Z39_50  service_aol  \
+0          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+1           2.720684    -0.038557     -0.02408       -0.083005    -0.003985
+2          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+3          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+4          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+5          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+6          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+7          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+8          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+9          -0.367555    -0.038557     -0.02408       -0.083005    -0.003985
+
+   service_auth  service_bgp  service_courier  service_csnet_ns  service_ctf  \
+0     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+1     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+2     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+3     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+4     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+5     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+6     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+7     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+8     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+9     -0.087401    -0.075287        -0.076556         -0.065918    -0.067002
+
+   service_daytime  service_discard  service_domain  service_domain_u  \
+0        -0.064444        -0.065491        -0.06736         -0.278095
+1        -0.064444        -0.065491        -0.06736         -0.278095
+2        -0.064444        -0.065491        -0.06736         -0.278095
+3        -0.064444        -0.065491        -0.06736         -0.278095
+4        -0.064444        -0.065491        -0.06736         -0.278095
+5        -0.064444        -0.065491        -0.06736         -0.278095
+6        -0.064444        -0.065491        -0.06736         -0.278095
+7        -0.064444        -0.065491        -0.06736         -0.278095
+8        -0.064444        -0.065491        -0.06736         -0.278095
+9        -0.064444        -0.065491        -0.06736         -0.278095
+
+   service_echo  service_eco_i  service_ecr_i  service_efs  service_exec  \
+0     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+1     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+2     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+3     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+4     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+5     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+6     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+7     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+8     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457
+9     -0.058797      -0.194371      -0.158232    -0.062168     -0.061457   
+
+   service_finger  service_ftp  service_ftp_data  service_gopher  \
+0       -0.119274    -0.118829          4.166943       -0.064257
+1       -0.119274    -0.118829         -0.239984       -0.064257
+2       -0.119274    -0.118829         -0.239984       -0.064257
+3       -0.119274    -0.118829         -0.239984       -0.064257
+4       -0.119274    -0.118829         -0.239984       -0.064257
+5       -0.119274    -0.118829         -0.239984       -0.064257
+6       -0.119274    -0.118829         -0.239984       -0.064257
+7       -0.119274    -0.118829         -0.239984       -0.064257
+8       -0.119274    -0.118829         -0.239984       -0.064257
+9       -0.119274    -0.118829         -0.239984       -0.064257
+
+   service_harvest  service_hostnames  service_http  service_http_2784  \
+0        -0.003985          -0.060539     -0.686328          -0.002817
+1        -0.003985          -0.060539     -0.686328          -0.002817
+2        -0.003985          -0.060539     -0.686328          -0.002817
+3        -0.003985          -0.060539      1.457030          -0.002817
+4        -0.003985          -0.060539      1.457030          -0.002817
+5        -0.003985          -0.060539     -0.686328          -0.002817
+6        -0.003985          -0.060539     -0.686328          -0.002817
+7        -0.003985          -0.060539     -0.686328          -0.002817
+8        -0.003985          -0.060539     -0.686328          -0.002817
+9        -0.003985          -0.060539     -0.686328          -0.002817
+
+   service_http_443  service_http_8001  service_imap4  service_iso_tsap  \
+0            -0.065          -0.003985      -0.071851          -0.07405
+1            -0.065          -0.003985      -0.071851          -0.07405
+2            -0.065          -0.003985      -0.071851          -0.07405
+3            -0.065          -0.003985      -0.071851          -0.07405
+4            -0.065          -0.003985      -0.071851          -0.07405
+5            -0.065          -0.003985      -0.071851          -0.07405
+6            -0.065          -0.003985      -0.071851          -0.07405
+7            -0.065          -0.003985      -0.071851          -0.07405
+8            -0.065          -0.003985      -0.071851          -0.07405
+9            -0.065          -0.003985      -0.071851          -0.07405
+
+   service_klogin  service_kshell  service_ldap  service_link  service_login  \
+0       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+1       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+2       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+3       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+4       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+5       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+6       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+7       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+8       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+9       -0.058729       -0.048777     -0.057143     -0.061522      -0.058456
+
+   service_mtp  service_name  service_netbios_dgm  service_netbios_ns  \
+0    -0.059136     -0.059942            -0.056792           -0.052556
+1    -0.059136     -0.059942            -0.056792           -0.052556
+2    -0.059136     -0.059942            -0.056792           -0.052556
+3    -0.059136     -0.059942            -0.056792           -0.052556
+4    -0.059136     -0.059942            -0.056792           -0.052556
+5    -0.059136     -0.059942            -0.056792           -0.052556
+6    -0.059136     -0.059942            -0.056792           -0.052556
+7    -0.059136     -0.059942            -0.056792           -0.052556
+8    -0.059136     -0.059942            -0.056792           -0.052556
+9    -0.059136     -0.059942            -0.056792           -0.052556
+
+   service_netbios_ssn  service_netstat  service_nnsp  service_nntp  \
+0            -0.053683        -0.053535     -0.070896     -0.048531
+1            -0.053683        -0.053535     -0.070896     -0.048531
+2            -0.053683        -0.053535     -0.070896     -0.048531
+3            -0.053683        -0.053535     -0.070896     -0.048531
+4            -0.053683        -0.053535     -0.070896     -0.048531
+5            -0.053683        -0.053535     -0.070896     -0.048531
+6            -0.053683        -0.053535     -0.070896     -0.048531
+7            -0.053683        -0.053535     -0.070896     -0.048531
+8            -0.053683        -0.053535     -0.070896     -0.048531
+9            -0.053683        -0.053535     -0.070896     -0.048531
+
+   service_ntp_u  service_other  service_pm_dump  service_pop_2  \
+0      -0.036543      -0.189322          -0.0063      -0.024891
+1      -0.036543       5.281999          -0.0063      -0.024891
+2      -0.036543      -0.189322          -0.0063      -0.024891
+3      -0.036543      -0.189322          -0.0063      -0.024891
+4      -0.036543      -0.189322          -0.0063      -0.024891
+5      -0.036543      -0.189322          -0.0063      -0.024891
+6      -0.036543      -0.189322          -0.0063      -0.024891
+7      -0.036543      -0.189322          -0.0063      -0.024891
+8      -0.036543      -0.189322          -0.0063      -0.024891
+9      -0.036543      -0.189322          -0.0063      -0.024891
+
+   service_pop_3  service_printer  service_private  service_red_i  \
+0      -0.045827         -0.02341        -0.458130      -0.007969
+1      -0.045827         -0.02341        -0.458130      -0.007969
+2      -0.045827         -0.02341         2.182788      -0.007969
+3      -0.045827         -0.02341        -0.458130      -0.007969
+4      -0.045827         -0.02341        -0.458130      -0.007969
+5      -0.045827         -0.02341         2.182788      -0.007969
+6      -0.045827         -0.02341         2.182788      -0.007969
+7      -0.045827         -0.02341         2.182788      -0.007969
+8      -0.045827         -0.02341        -0.458130      -0.007969
+9      -0.045827         -0.02341         2.182788      -0.007969
+
+   service_remote_job  service_rje  service_shell  service_smtp  \
+0           -0.024891    -0.026137      -0.022721     -0.248254
+1           -0.024891    -0.026137      -0.022721     -0.248254
+2           -0.024891    -0.026137      -0.022721     -0.248254
+3           -0.024891    -0.026137      -0.022721     -0.248254
+4           -0.024891    -0.026137      -0.022721     -0.248254
+5           -0.024891    -0.026137      -0.022721     -0.248254
+6           -0.024891    -0.026137      -0.022721     -0.248254
+7           -0.024891    -0.026137      -0.022721     -0.248254
+8           40.175098    -0.026137      -0.022721     -0.248254
+9           -0.024891    -0.026137      -0.022721     -0.248254
+
+   service_sql_net  service_ssh  service_sunrpc  service_supdup  \
+0        -0.044144    -0.049748       -0.055078       -0.065857
+1        -0.044144    -0.049748       -0.055078       -0.065857
+2        -0.044144    -0.049748       -0.055078       -0.065857
+3        -0.044144    -0.049748       -0.055078       -0.065857
+4        -0.044144    -0.049748       -0.055078       -0.065857
+5        -0.044144    -0.049748       -0.055078       -0.065857
+6        -0.044144    -0.049748       -0.055078       -0.065857
+7        -0.044144    -0.049748       -0.055078       -0.065857
+8        -0.044144    -0.049748       -0.055078       -0.065857
+9        -0.044144    -0.049748       -0.055078       -0.065857
+
+   service_systat  service_telnet  service_tftp_u  service_tim_i  \
+0       -0.061652       -0.137964        -0.00488      -0.007969
+1       -0.061652       -0.137964        -0.00488      -0.007969
+2       -0.061652       -0.137964        -0.00488      -0.007969
+3       -0.061652       -0.137964        -0.00488      -0.007969
+4       -0.061652       -0.137964        -0.00488      -0.007969
+5       -0.061652       -0.137964        -0.00488      -0.007969
+6       -0.061652       -0.137964        -0.00488      -0.007969
+7       -0.061652       -0.137964        -0.00488      -0.007969
+8       -0.061652       -0.137964        -0.00488      -0.007969
+9       -0.061652       -0.137964        -0.00488      -0.007969
+
+   service_time  service_urh_i  service_urp_i  service_uucp  \
+0      -0.07224       -0.00891      -0.069295     -0.078933
+1      -0.07224       -0.00891      -0.069295     -0.078933
+2      -0.07224       -0.00891      -0.069295     -0.078933
+3      -0.07224       -0.00891      -0.069295     -0.078933
+4      -0.07224       -0.00891      -0.069295     -0.078933
+5      -0.07224       -0.00891      -0.069295     -0.078933
+6      -0.07224       -0.00891      -0.069295     -0.078933
+7      -0.07224       -0.00891      -0.069295     -0.078933
+8      -0.07224       -0.00891      -0.069295     -0.078933
+9      -0.07224       -0.00891      -0.069295     -0.078933
+
+   service_uucp_path  service_vmnet  service_whois  flag_OTH  flag_REJ  \
+0          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+1          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+2          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+3          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+4          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+5          -0.074159      -0.070157      -0.074375 -0.019113  3.196020
+6          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+7          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+8          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+9          -0.074159      -0.070157      -0.074375 -0.019113 -0.312889
+
+   flag_RSTO  flag_RSTOS0  flag_RSTR   flag_S0   flag_S1   flag_S2   flag_S3  \
+0   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+1   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+2   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+3   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+4   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+5   -0.11205    -0.028606  -0.139982 -0.618438 -0.053906 -0.031767 -0.019726
+6   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+7   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+8   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+9   -0.11205    -0.028606  -0.139982  1.616978 -0.053906 -0.031767 -0.019726
+
+    flag_SF   flag_SH
+0  0.825150 -0.046432
+1  0.825150 -0.046432
+2 -1.211901 -0.046432
+3  0.825150 -0.046432
+4  0.825150 -0.046432
+5 -1.211901 -0.046432
+6 -1.211901 -0.046432
+7 -1.211901 -0.046432
+8 -1.211901 -0.046432
+9 -1.211901 -0.046432
+Label for the first sequnce: 1
+--- Starting Episode 1 ---
+WARNING:tensorflow:From E:\Vscode projects\MINI Project\IDS\venv\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+Step: 1000, Current Epsilon: 0.0100
+Step: 2000, Current Epsilon: 0.0100
+Step: 3000, Current Epsilon: 0.0100
+Step: 4000, Current Epsilon: 0.0100
+Step: 5000, Current Epsilon: 0.0100
+Step: 6000, Current Epsilon: 0.0100
+Step: 7000, Current Epsilon: 0.0100
+Step: 8000, Current Epsilon: 0.0100
+Step: 9000, Current Epsilon: 0.0100
+Step: 10000, Current Epsilon: 0.0100
+Step: 11000, Current Epsilon: 0.0100
+Step: 12000, Current Epsilon: 0.0100
+Step: 13000, Current Epsilon: 0.0100
+Step: 14000, Current Epsilon: 0.0100
+Step: 15000, Current Epsilon: 0.0100
+Step: 16000, Current Epsilon: 0.0100
+Step: 17000, Current Epsilon: 0.0100
+Step: 18000, Current Epsilon: 0.0100
+Step: 19000, Current Epsilon: 0.0100
+Step: 20000, Current Epsilon: 0.0100
+Step: 21000, Current Epsilon: 0.0100
+Step: 22000, Current Epsilon: 0.0100
+Step: 23000, Current Epsilon: 0.0100
+Step: 24000, Current Epsilon: 0.0100
+Step: 25000, Current Epsilon: 0.0100
+Step: 26000, Current Epsilon: 0.0100
+Step: 27000, Current Epsilon: 0.0100
+Step: 28000, Current Epsilon: 0.0100
+Step: 29000, Current Epsilon: 0.0100
+Step: 30000, Current Epsilon: 0.0100
+Step: 31000, Current Epsilon: 0.0100
+Step: 32000, Current Epsilon: 0.0100
+Step: 33000, Current Epsilon: 0.0100
+Step: 34000, Current Epsilon: 0.0100
+Step: 35000, Current Epsilon: 0.0100
+Step: 36000, Current Epsilon: 0.0100
+Step: 37000, Current Epsilon: 0.0100
+Step: 38000, Current Epsilon: 0.0100
+Step: 39000, Current Epsilon: 0.0100
+Step: 40000, Current Epsilon: 0.0100
+Step: 41000, Current Epsilon: 0.0100
+Step: 42000, Current Epsilon: 0.0100
+Step: 43000, Current Epsilon: 0.0100
+Step: 44000, Current Epsilon: 0.0100
+Step: 45000, Current Epsilon: 0.0100
+Step: 46000, Current Epsilon: 0.0100
+Step: 47000, Current Epsilon: 0.0100
+Step: 48000, Current Epsilon: 0.0100
+Step: 49000, Current Epsilon: 0.0100
+Step: 50000, Current Epsilon: 0.0100
+Step: 51000, Current Epsilon: 0.0100
+Step: 52000, Current Epsilon: 0.0100
+Step: 53000, Current Epsilon: 0.0100
+Step: 54000, Current Epsilon: 0.0100
+Step: 55000, Current Epsilon: 0.0100
+Step: 56000, Current Epsilon: 0.0100
+Step: 57000, Current Epsilon: 0.0100
+Step: 58000, Current Epsilon: 0.0100
+Step: 59000, Current Epsilon: 0.0100
+Step: 60000, Current Epsilon: 0.0100
+Step: 61000, Current Epsilon: 0.0100
+Step: 62000, Current Epsilon: 0.0100
+Step: 63000, Current Epsilon: 0.0100
+Step: 64000, Current Epsilon: 0.0100
+Step: 65000, Current Epsilon: 0.0100
+Step: 66000, Current Epsilon: 0.0100
+Step: 67000, Current Epsilon: 0.0100
+Step: 68000, Current Epsilon: 0.0100
+Step: 69000, Current Epsilon: 0.0100
+Step: 70000, Current Epsilon: 0.0100
+Step: 71000, Current Epsilon: 0.0100
+Step: 72000, Current Epsilon: 0.0100
+Step: 73000, Current Epsilon: 0.0100
+Step: 74000, Current Epsilon: 0.0100
+Step: 75000, Current Epsilon: 0.0100
+Step: 76000, Current Epsilon: 0.0100
+Step: 77000, Current Epsilon: 0.0100
+Step: 78000, Current Epsilon: 0.0100
+Step: 79000, Current Epsilon: 0.0100
+Step: 80000, Current Epsilon: 0.0100
+Step: 81000, Current Epsilon: 0.0100
+Step: 82000, Current Epsilon: 0.0100
+Step: 83000, Current Epsilon: 0.0100
+Step: 84000, Current Epsilon: 0.0100
+Step: 85000, Current Epsilon: 0.0100
+Step: 86000, Current Epsilon: 0.0100
+Step: 87000, Current Epsilon: 0.0100
+Step: 88000, Current Epsilon: 0.0100
+Step: 89000, Current Epsilon: 0.0100
+Step: 90000, Current Epsilon: 0.0100
+Step: 91000, Current Epsilon: 0.0100
+Step: 92000, Current Epsilon: 0.0100
+Step: 93000, Current Epsilon: 0.0100
+Step: 94000, Current Epsilon: 0.0100
+Step: 95000, Current Epsilon: 0.0100
+Step: 96000, Current Epsilon: 0.0100
+Step: 97000, Current Epsilon: 0.0100
+Step: 98000, Current Epsilon: 0.0100
+Step: 99000, Current Epsilon: 0.0100
+Step: 100000, Current Epsilon: 0.0100
+Step: 101000, Current Epsilon: 0.0100
+Step: 102000, Current Epsilon: 0.0100
+Step: 103000, Current Epsilon: 0.0100
+Step: 104000, Current Epsilon: 0.0100
+Step: 105000, Current Epsilon: 0.0100
+Step: 106000, Current Epsilon: 0.0100
+Step: 107000, Current Epsilon: 0.0100
+Step: 108000, Current Epsilon: 0.0100
+Step: 109000, Current Epsilon: 0.0100
+Step: 110000, Current Epsilon: 0.0100
+Step: 111000, Current Epsilon: 0.0100
+Step: 112000, Current Epsilon: 0.0100
+Step: 113000, Current Epsilon: 0.0100
+Step: 114000, Current Epsilon: 0.0100
+Step: 115000, Current Epsilon: 0.0100
+Step: 116000, Current Epsilon: 0.0100
+Step: 117000, Current Epsilon: 0.0100
+Step: 118000, Current Epsilon: 0.0100
+Step: 119000, Current Epsilon: 0.0100
+Step: 120000, Current Epsilon: 0.0100
+Step: 121000, Current Epsilon: 0.0100
+Step: 122000, Current Epsilon: 0.0100
+Step: 123000, Current Epsilon: 0.0100
+Step: 124000, Current Epsilon: 0.0100
+Step: 125000, Current Epsilon: 0.0100
+Episode 1 Finished! Total Steps: 125963, Total Reward: 116233, Final Epsilon: 0.0100
