@@ -3,7 +3,8 @@ from sklearn.metrics import classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
 from dataSet import X_test, y_test
-from tensorflow.keras.models import load_model
+import keras 
+from keras.models import load_model
 
 print("Evaluating LSTM-DQN on Test Dataset...")
 
@@ -11,7 +12,7 @@ main_network = load_model("lstm_dqn_model.keras")
 
 # 1. Ask the trained network to predict the test dataset
 # Keras predict handles the batching automatically
-q_values = main_network.predict(X_test, batch_size=32)
+q_values = main_network.predict(X_test, batch_size=32) #type: ignore
 
 # Pick the action with the highest Q-value for each step
 predictions = np.argmax(q_values, axis=1)

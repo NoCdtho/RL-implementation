@@ -49,7 +49,7 @@ columns = [
     ,'level'
 ]
 
-df = pd.read_csv("KDDTrain+.txt", names=columns)
+df = pd.read_csv("Ktrain.txt", names=columns)
 
 df = df.drop(columns=["level"])
 pd.set_option('display.max_column', None)
@@ -94,14 +94,11 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # To see the first 10 sequence of packets
-first_sequence = X_train[0]
-readable_sequence = pd.DataFrame(first_sequence, columns=X.columns)
-print(readable_sequence)
-print("Label for the first sequnce:", y_train[0])
+# first_sequence = X_train[0]
+# readable_sequence = pd.DataFrame(first_sequence, columns=X.columns)
+# print(readable_sequence)
+# print("Label for the first sequnce:", y_train[0])
 
 # saving the processed data
-
-""" 
 np.save("X_train.npy", X_train)
 np.save("y_train.npy", y_train)
-"""

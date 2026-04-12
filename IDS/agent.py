@@ -1,7 +1,9 @@
+from dataSet import X_seq
 from collections import deque
-from tensorflow.keras.models import Sequential 
-from tensorflow.keras.layers import Input, LSTM, Dense
-from tensorflow.keras.optimizers import Adam
+import keras 
+from keras.models import Sequential 
+from keras.layers import Input, LSTM, Dense
+from keras.optimizers import Adam
 import numpy as np
 import random
 
@@ -16,7 +18,7 @@ batch_size = 32 # number of memories to train on at once
 # Building the basic LSTM DQN
 def build_q_network():
     model = Sequential([
-        Input(shape=(10, 122)), # 10 timesteps, 122 features
+        Input(shape=(10, X_seq.shape[2])), # 10 timesteps, 118 features
         LSTM(64, return_sequences=False), # Number of LSTM units
         Dense(32, activation='relu'), 
         Dense(2, activation='linear') # Q-values for action 0 and action 1
@@ -46,7 +48,7 @@ def choose_action(state, epsilon):
         # dont know exactly what this below 2 lines codes  
         state_batch = np.expand_dims(state, axis=0)
         # I think this line takes the q_values that is predicted by the main network
-        q_values = main_network.predict(state_batch, verbose=0)
+        q_values = main_network.predict(state_batch, verbose=0) # type: ignore
 
         # pick the action (index) with the highest Q_value
         return np.argmax(q_values[0])
@@ -65,8 +67,8 @@ def replay(batch_size):
     dones = np.array([transition[4] for transition in minibatch])
     
     # Predict Q-values
-    current_q_values = main_network.predict(states, verbose=0)
-    next_q_values = target_network.predict(next_states, verbose=0)
+    current_q_values = main_network.predict(states, verbose=0) # type: ignore
+    next_q_values = target_network.predict(next_states, verbose=0) # type: ignore
 
     # Apply the Bellman Equation
     for i in range(batch_size):
@@ -78,7 +80,7 @@ def replay(batch_size):
         current_q_values[i][actions[i]] = target
 
     # Train the network on the updated values
-    main_network.fit(states, current_q_values, batch_size=batch_size, epochs=1, verbose=0)
+    main_network.fit(states, current_q_values, batch_size=batch_size, epochs=1, verbose=0) # type: ignore
 
 
 def update_target_network():

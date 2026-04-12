@@ -33,7 +33,8 @@ for e in range(EPISODES):
         remember(state, action, reward, next_state, done)
         
         # 5. Agent learns from past memories
-        replay(batch_size)
+        if step_count % 8 == 0:
+            replay(batch_size)
         
         # 6. Decay exploration rate
         if current_epsilon > epsilon_min:
@@ -48,12 +49,13 @@ for e in range(EPISODES):
         # 7. Sync networks at the end of the episode
         if step_count % 100 == 0:
             update_target_network()
-            episode_rewards.append(total_reward)
+            
         
         # Print progress to terminal
         if step_count % 1000 == 0:
             print(f"Step: {step_count}, Current Epsilon: {current_epsilon:.4f}")
-
+    
+    episode_rewards.append(total_reward)
 
     print(f"Episode {e + 1} Finished! Total Steps: {step_count}, Total Reward: {total_reward}, Final Epsilon: {current_epsilon:.4f}\n")
 
