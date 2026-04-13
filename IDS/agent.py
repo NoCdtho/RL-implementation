@@ -53,6 +53,7 @@ def choose_action(state, epsilon):
         # pick the action (index) with the highest Q_value
         return np.argmax(q_values[0])
 
+# not understood function this part
 def replay(batch_size):
     if len(replay_buffer) < batch_size:
         return

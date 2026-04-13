@@ -2,8 +2,8 @@ from agent import main_network
 import matplotlib.pyplot as plt
 from dataSet import X_seq, y_seq
 from environment import IntrusionDetectionEnv
-from agent import choose_action, remember, replay, update_target_network
-from agent import epsilon, epsilon_decay, epsilon_min, batch_size
+from agent import choose_action, remember, replay, update_target_network # this are methods/functions 
+from agent import epsilon, epsilon_decay, epsilon_min, batch_size # this are variables 
 
 # 1. Initialize the Environment
 env = IntrusionDetectionEnv(X_seq, y_seq)
@@ -29,7 +29,7 @@ for e in range(EPISODES):
         # 3. Environment processes the action
         next_state, reward, done = env.step(action)
         
-        # 4. Agent remembers the interaction
+        # 4. Agent remembers the interaction using replay buffer
         remember(state, action, reward, next_state, done)
         
         # 5. Agent learns from past memories

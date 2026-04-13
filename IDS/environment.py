@@ -34,10 +34,13 @@ class IntrusionDetectionEnv:
         else:
             raise ValueError('Invalid action or label')
             
+        # increse the step so that it goes to next state
         self.current_step += 1
 
+        # check if it was last network packet
         done = self.current_step >= len(self.X_seq)
 
+        
         if done:
             next_step = np.zeros_like(self.X_seq[0])
         else:
