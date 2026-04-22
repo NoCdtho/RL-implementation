@@ -50,11 +50,10 @@ for e in range(EPISODES):
         if step_count % 100 == 0:
             update_target_network()
             
-        
         # Print progress to terminal
         if step_count % 1000 == 0:
             print(f"Step: {step_count}, Current Epsilon: {current_epsilon:.4f}")
-    
+    # Added the updated reward in the array  
     episode_rewards.append(total_reward)
 
     print(f"Episode {e + 1} Finished! Total Steps: {step_count}, Total Reward: {total_reward}, Final Epsilon: {current_epsilon:.4f}\n")

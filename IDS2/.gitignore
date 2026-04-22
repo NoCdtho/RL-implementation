@@ -1,0 +1,21 @@
+venv/
+env/
+.env/
+.venv/
+
+__pycache__/
+*.pyc
+*.pyo
+
+
+# Massive datasets or logs 
+*.csv
+.npy
+.pt
+.pth
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db

@@ -27,9 +27,9 @@ class IntrusionDetectionEnv:
             reward = 1
         elif action == 0 and true_label == 0:
             reward = 1
-        elif action == 1 and true_label == 0:
+        elif action == 1 and true_label == 0: # false positive thought this was attack but was normal packet
             reward = -1
-        elif action == 0 and true_label == 1:
+        elif action == 0 and true_label == 1: #false negative thought this was normal packet but was a attack
             reward = self.false_negative_penalty
         else:
             raise ValueError('Invalid action or label')
